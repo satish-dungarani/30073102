@@ -13,14 +13,13 @@ namespace PasswordManagerSystem.Services
             _passwordHistoryRepository = passwordHistoryRepository;
         }
 
-        public IEnumerable<PasswordHistory> GetPasswordHistories(int passwordId)
+        public IEnumerable<HistoryModel> GetPasswordHistoriesByUserId(int userId, string searchstr)
         {
-            return _passwordHistoryRepository.GetPasswordHistories(passwordId);
+            return _passwordHistoryRepository.GetPasswordHistoriesByUserId(userId, searchstr);
         }
 
         public void CreatePasswordHistory(PasswordHistory passwordHistory)
         {
-            // Additional business logic or validation can be added here
             _passwordHistoryRepository.CreatePasswordHistory(passwordHistory);
         }
     }

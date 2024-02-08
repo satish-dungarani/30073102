@@ -1,6 +1,7 @@
 ﻿using PasswordManagerSystem.Models;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 namespace PasswordManagerSystem.Repositories
 {
@@ -31,7 +32,8 @@ namespace PasswordManagerSystem.Repositories
 
     public void UpdateUserDetail(UserDetail userDetail)
     {
-        _dbContext.Entry(userDetail).State = EntityState.Modified;
+            _dbContext.UserDetails.AddOrUpdate(userDetail);
+        //_dbContext.Entry(userDetail).State = EntityState.Modified;
         _dbContext.SaveChanges();
     }
 

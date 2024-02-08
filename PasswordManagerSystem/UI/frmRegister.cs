@@ -1,13 +1,7 @@
-﻿using PasswordManagerSystem.Models;
+﻿using PasswordManagerSystem.Helpers;
+using PasswordManagerSystem.Models;
 using PasswordManagerSystem.Services;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PasswordManagerSystem.Forms
@@ -15,11 +9,16 @@ namespace PasswordManagerSystem.Forms
     public partial class frmRegister : Form
     {
         private readonly UserService _userService;
-
-        public frmRegister(UserService userService)
+        private readonly UserDetailService _userDetailService;
+        private readonly PasswordService _passwordService;
+        private readonly PasswordHistoryService _passwordHistoryService;
+        public frmRegister(UserService userService, UserDetailService userDetailService, PasswordService passwordService, PasswordHistoryService passwordHistoryService)
         {
             InitializeComponent();
             _userService = userService;
+            _userDetailService = userDetailService;
+            _passwordService = passwordService;
+            _passwordHistoryService = passwordHistoryService;
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -28,7 +27,6 @@ namespace PasswordManagerSystem.Forms
             string password = txtPassword.Text;
             string confirmPassword = txtConfPassword.Text;
 
-            // Perform basic validation
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(confirmPassword))
             {
                 MessageBox.Show("Please fill in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -41,21 +39,18 @@ namespace PasswordManagerSystem.Forms
                 return;
             }
 
-            // Create a new user
             User newUser = new User
             {
                 Username = username,
                 Password = password
-                // You can set other properties as needed
             };
 
             try
             {
-                // Call the service to create the user
                 _userService.CreateUser(newUser);
                 MessageBox.Show("User created successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ClearFields();
-                frmLogin loginfrm = new frmLogin(_userService);
+                FormHelper.ClearForm(this);
+                frmLogin loginfrm = new frmLogin(_userService, _userDetailService, _passwordService, _passwordHistoryService);
                 loginfrm.Show();
                 this.Hide();
             }
@@ -64,13 +59,16 @@ namespace PasswordManagerSystem.Forms
                 MessageBox.Show($"Error creating user: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void ClearFields()
+         
+        private void btmMinimize_Click(object sender, EventArgs e)
         {
-            // Clear text boxes
-            txtUsername.Text = string.Empty;
-            txtPassword.Text = string.Empty;
-            txtConfPassword.Text = string.Empty;
+            FormHelper.MinimizeForm(this);
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            FormHelper.CloseForm(this);
+        }
+
     }
 }

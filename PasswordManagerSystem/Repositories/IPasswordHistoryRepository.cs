@@ -3,9 +3,9 @@ using System.Collections.Generic;
 namespace PasswordManagerSystem.Repositories
 {
     public interface IPasswordHistoryRepository
-{
-    IEnumerable<PasswordHistory> GetPasswordHistories(int passwordId);
-    void CreatePasswordHistory(PasswordHistory passwordHistory);
-    // Add other methods if needed
-}
+    {
+        IEnumerable<HistoryModel> GetPasswordHistories(string searchstr);
+        IEnumerable<HistoryModel> GetPasswordHistoriesByUserId(int userId, string searchstr);
+        void CreatePasswordHistory(PasswordHistory passwordHistory);
+    }
 }

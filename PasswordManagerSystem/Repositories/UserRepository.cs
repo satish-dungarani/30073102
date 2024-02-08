@@ -1,6 +1,8 @@
 ﻿using PasswordManagerSystem.Models;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.SqlClient;
 using System.Linq;
 namespace PasswordManagerSystem.Repositories
 {
@@ -43,6 +45,11 @@ namespace PasswordManagerSystem.Repositories
                 _dbContext.Users.Remove(user);
                 _dbContext.SaveChanges();
             }
+        }
+
+        public User GetUserByUsernameAndPassword(string username, string password)
+        {
+           return _dbContext.Users.FirstOrDefault(u => u.Username == username && u.Password == password);
         }
     }
 }

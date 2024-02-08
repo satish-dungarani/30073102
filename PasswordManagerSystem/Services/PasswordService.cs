@@ -22,22 +22,24 @@ namespace PasswordManagerSystem.Services
         {
             return _passwordRepository.GetAllPasswords();
         }
+        
+        public IEnumerable<PasswordModel> GetAllPasswordsByUserId(int userId, string searchstr)
+        {
+            return _passwordRepository.GetAllPasswordsByUserId(userId, searchstr);
+        }
 
         public void CreatePassword(Password password)
         {
-            // Additional business logic or validation can be added here
             _passwordRepository.CreatePassword(password);
         }
 
         public void UpdatePassword(Password password)
         {
-            // Additional business logic or validation can be added here
             _passwordRepository.UpdatePassword(password);
         }
 
         public void DeletePassword(int passwordId)
         {
-            // Additional business logic or validation can be added here
             _passwordRepository.DeletePassword(passwordId);
         }
     }
