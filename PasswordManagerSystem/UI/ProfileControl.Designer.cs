@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.lblFirstname = new System.Windows.Forms.Label();
             this.txtFirstname = new System.Windows.Forms.TextBox();
             this.lblLastname = new System.Windows.Forms.Label();
@@ -41,7 +40,6 @@
             this.lblUserId = new System.Windows.Forms.Label();
             this.txtUserId = new System.Windows.Forms.TextBox();
             this.txtUserDetailId = new System.Windows.Forms.TextBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.picProf = new System.Windows.Forms.PictureBox();
             this.btnUpload = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picProf)).BeginInit();
@@ -50,7 +48,7 @@
             // lblFirstname
             // 
             this.lblFirstname.AutoSize = true;
-            this.lblFirstname.Location = new System.Drawing.Point(85, 184);
+            this.lblFirstname.Location = new System.Drawing.Point(302, 220);
             this.lblFirstname.Name = "lblFirstname";
             this.lblFirstname.Size = new System.Drawing.Size(72, 16);
             this.lblFirstname.TabIndex = 0;
@@ -58,7 +56,7 @@
             // 
             // txtFirstname
             // 
-            this.txtFirstname.Location = new System.Drawing.Point(200, 178);
+            this.txtFirstname.Location = new System.Drawing.Point(417, 214);
             this.txtFirstname.Name = "txtFirstname";
             this.txtFirstname.Size = new System.Drawing.Size(216, 22);
             this.txtFirstname.TabIndex = 1;
@@ -66,7 +64,7 @@
             // lblLastname
             // 
             this.lblLastname.AutoSize = true;
-            this.lblLastname.Location = new System.Drawing.Point(85, 230);
+            this.lblLastname.Location = new System.Drawing.Point(302, 266);
             this.lblLastname.Name = "lblLastname";
             this.lblLastname.Size = new System.Drawing.Size(72, 16);
             this.lblLastname.TabIndex = 2;
@@ -75,7 +73,7 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(85, 283);
+            this.lblEmail.Location = new System.Drawing.Point(302, 319);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(41, 16);
             this.lblEmail.TabIndex = 3;
@@ -84,7 +82,7 @@
             // lblMobile
             // 
             this.lblMobile.AutoSize = true;
-            this.lblMobile.Location = new System.Drawing.Point(85, 326);
+            this.lblMobile.Location = new System.Drawing.Point(302, 362);
             this.lblMobile.Name = "lblMobile";
             this.lblMobile.Size = new System.Drawing.Size(48, 16);
             this.lblMobile.TabIndex = 4;
@@ -92,9 +90,9 @@
             // 
             // bnUpdate
             // 
-            this.bnUpdate.Location = new System.Drawing.Point(341, 370);
+            this.bnUpdate.Location = new System.Drawing.Point(558, 406);
             this.bnUpdate.Name = "bnUpdate";
-            this.bnUpdate.Size = new System.Drawing.Size(75, 43);
+            this.bnUpdate.Size = new System.Drawing.Size(75, 31);
             this.bnUpdate.TabIndex = 5;
             this.bnUpdate.Text = "Save";
             this.bnUpdate.UseVisualStyleBackColor = true;
@@ -102,21 +100,21 @@
             // 
             // txtLastname
             // 
-            this.txtLastname.Location = new System.Drawing.Point(200, 224);
+            this.txtLastname.Location = new System.Drawing.Point(417, 260);
             this.txtLastname.Name = "txtLastname";
             this.txtLastname.Size = new System.Drawing.Size(216, 22);
             this.txtLastname.TabIndex = 2;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(200, 277);
+            this.txtEmail.Location = new System.Drawing.Point(417, 313);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(216, 22);
             this.txtEmail.TabIndex = 3;
             // 
             // txtMobile
             // 
-            this.txtMobile.Location = new System.Drawing.Point(200, 320);
+            this.txtMobile.Location = new System.Drawing.Point(417, 356);
             this.txtMobile.Name = "txtMobile";
             this.txtMobile.Size = new System.Drawing.Size(216, 22);
             this.txtMobile.TabIndex = 4;
@@ -124,14 +122,14 @@
             // lblUserId
             // 
             this.lblUserId.AutoSize = true;
-            this.lblUserId.Location = new System.Drawing.Point(200, 92);
+            this.lblUserId.Location = new System.Drawing.Point(417, 128);
             this.lblUserId.Name = "lblUserId";
             this.lblUserId.Size = new System.Drawing.Size(0, 16);
             this.lblUserId.TabIndex = 9;
             // 
             // txtUserId
             // 
-            this.txtUserId.Location = new System.Drawing.Point(371, 27);
+            this.txtUserId.Location = new System.Drawing.Point(588, 63);
             this.txtUserId.Name = "txtUserId";
             this.txtUserId.Size = new System.Drawing.Size(45, 22);
             this.txtUserId.TabIndex = 10;
@@ -139,22 +137,16 @@
             // 
             // txtUserDetailId
             // 
-            this.txtUserDetailId.Location = new System.Drawing.Point(371, 55);
+            this.txtUserDetailId.Location = new System.Drawing.Point(588, 91);
             this.txtUserDetailId.Name = "txtUserDetailId";
             this.txtUserDetailId.Size = new System.Drawing.Size(45, 22);
             this.txtUserDetailId.TabIndex = 11;
             this.txtUserDetailId.Visible = false;
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
             // picProf
             // 
             this.picProf.Image = global::PasswordManagerSystem.Properties.Resources.profile;
-            this.picProf.Location = new System.Drawing.Point(200, 0);
+            this.picProf.Location = new System.Drawing.Point(305, 63);
             this.picProf.Name = "picProf";
             this.picProf.Size = new System.Drawing.Size(115, 108);
             this.picProf.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -163,7 +155,7 @@
             // 
             // btnUpload
             // 
-            this.btnUpload.Location = new System.Drawing.Point(219, 114);
+            this.btnUpload.Location = new System.Drawing.Point(436, 150);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(75, 23);
             this.btnUpload.TabIndex = 14;
@@ -175,6 +167,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.btnUpload);
             this.Controls.Add(this.picProf);
             this.Controls.Add(this.txtUserDetailId);
@@ -190,7 +183,7 @@
             this.Controls.Add(this.txtFirstname);
             this.Controls.Add(this.lblFirstname);
             this.Name = "ProfileControl";
-            this.Size = new System.Drawing.Size(478, 438);
+            this.Size = new System.Drawing.Size(1007, 542);
             this.Load += new System.EventHandler(this.ProfileControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picProf)).EndInit();
             this.ResumeLayout(false);
@@ -212,7 +205,6 @@
         private System.Windows.Forms.Label lblUserId;
         private System.Windows.Forms.TextBox txtUserId;
         private System.Windows.Forms.TextBox txtUserDetailId;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.PictureBox picProf;
         private System.Windows.Forms.Button btnUpload;
     }

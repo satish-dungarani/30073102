@@ -1,4 +1,5 @@
-﻿using PasswordManagerSystem.Models;
+﻿using PasswordManagerSystem.Data;
+using PasswordManagerSystem.Models;
 using PasswordManagerSystem.Services;
 using System;
 using System.Drawing;
@@ -13,6 +14,7 @@ namespace PasswordManagerSystem.UI
     {
         private readonly ProfileModel _profileModel;
         private readonly UserDetailService _userDetailService;
+        public event EventHandler ProfileSaved;
         public ProfileControl(ProfileModel profileModel, UserDetailService userDetailService)
         {
             InitializeComponent();
@@ -36,9 +38,6 @@ namespace PasswordManagerSystem.UI
             }
             catch (Exception)
             {
-                picProf.Image = Image.FromFile(
-                    Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location),
-                                    "Content\\Images\\profile.png"));
             }
 
         }
@@ -71,10 +70,7 @@ namespace PasswordManagerSystem.UI
 
                 MessageBox.Show("User Profile created successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            if (sender is frmMaster master)
-            {
-                master.Show();
-            }
+            ProfileSaved?.Invoke(this, EventArgs.Empty);
         }
 
         private void btnUpload_Click(object sender, EventArgs e)

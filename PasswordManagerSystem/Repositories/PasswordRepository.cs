@@ -1,9 +1,7 @@
-﻿using PasswordManagerSystem.Helpers;
+﻿using PasswordManagerSystem.Data;
+using PasswordManagerSystem.Helpers;
 using PasswordManagerSystem.Models;
-using PasswordManagerSystem.UI;
-using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Data.Entity.Migrations;
 using System.Linq;
 using static PasswordManagerSystem.Helpers.FormHelper;
@@ -37,6 +35,9 @@ namespace PasswordManagerSystem.Repositories
                         where (password.UserId == userId || Properties.Settings.Default.IsAdmin) &&
                         (string.IsNullOrEmpty(searchstr) ||
                         password.PasswordValue.Contains(searchstr) ||
+                        user.Username.Contains(searchstr) ||
+                        password.ApplicationName.Contains(searchstr) ||
+                        ((ApplicationType)password.ApplicationType).ToString().Contains(searchstr) ||
                         password.Username.Contains(searchstr))
                         select new PasswordModel
                         {
@@ -60,6 +61,7 @@ namespace PasswordManagerSystem.Repositories
 
         public void UpdatePassword(Password password)
         {
+            password.PasswordValue = FormHelper.EncryptData(password.PasswordValue);
             var history = new PasswordHistory()
             {
                 PasswordId = password.Id,

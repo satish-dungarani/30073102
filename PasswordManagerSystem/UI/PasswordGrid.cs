@@ -1,4 +1,6 @@
-﻿using PasswordManagerSystem.Models;
+﻿using PasswordManagerSystem.Data;
+using PasswordManagerSystem.Helpers;
+using PasswordManagerSystem.Models;
 using PasswordManagerSystem.Services;
 using System;
 using System.ComponentModel;
@@ -13,13 +15,14 @@ namespace PasswordManagerSystem.UI
         private readonly ProfileModel _profileModel;
         private readonly PasswordService _passwordService;
         private SortableBindingList<PasswordModel> _sortablePasswords;
+        public int passId = 0;
+
         public PasswordGrid(ProfileModel profileModel, PasswordService passwordService)
         {
             InitializeComponent();
             _profileModel = profileModel;
             _passwordService = passwordService;
         }
-        
 
         private void PasswordGrid_Load(object sender, EventArgs e)
         {
@@ -45,7 +48,7 @@ namespace PasswordManagerSystem.UI
 
             if (dgvPasswordGrid.Columns[e.ColumnIndex].Name == "Edit" && e.RowIndex >= 0)
             {
-                int idValue = (int)dgvPasswordGrid.Rows[e.RowIndex].Cells["Id"].Value;
+                passId = (int)dgvPasswordGrid.Rows[e.RowIndex].Cells["Id"].Value;
                 ButtonClicked?.Invoke(this, EventArgs.Empty);
 
             }
@@ -59,7 +62,7 @@ namespace PasswordManagerSystem.UI
             else if (dgvPasswordGrid.Columns[e.ColumnIndex].Name == "ViewPassword" && e.RowIndex >= 0)
             {
                 string idValue = dgvPasswordGrid.Rows[e.RowIndex].Cells["AppPassword"].Value.ToString();
-                MessageBox.Show(idValue, "Password", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(FormHelper.DecryptData(idValue), "Password", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

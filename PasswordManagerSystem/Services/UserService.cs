@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using PasswordManagerSystem.Data;
 using PasswordManagerSystem.Models;
 using PasswordManagerSystem.Repositories;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace PasswordManagerSystem.Services
 {
@@ -16,33 +17,16 @@ namespace PasswordManagerSystem.Services
             _userDetailRepository = userDetailRepository;
         }
 
-        public User GetUserById(int userId)
-        {
-            return _userRepository.GetUserById(userId);
-        }
-
-        public IEnumerable<User> GetAllUsers()
-        {
-            return _userRepository.GetAllUsers();
-        }
-
         public void CreateUser(User user)
         {
-            // Additional business logic or valida_userRepositorytion can be added here
             _userRepository.CreateUser(user);
-        }
-
-        public void UpdateUser(User user)
-        {
-            // Additional business logic or validation can be added here
-            _userRepository.UpdateUser(user);
         }
 
         public void DeleteUser(int userId)
         {
-            // Additional business logic or validation can be added here
             _userRepository.DeleteUser(userId);
         }
+
         public ProfileModel GetUserByUsernameAndPassword(string username, string password)
         {
             var user = _userRepository.GetUserByUsernameAndPassword(username, password);
@@ -54,6 +38,11 @@ namespace PasswordManagerSystem.Services
                 user = user,
                 userDetail = _userDetailRepository.GetAllUserDetails().FirstOrDefault(x => x.UserId == user.Id)
             };
+        }
+
+        public List<UserModel> GetAllUserDetails(string searchstr)
+        {
+            return _userRepository.GetAllUsers(searchstr).ToList();
         }
     }
 }

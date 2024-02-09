@@ -1,5 +1,5 @@
-﻿using PasswordManagerSystem.Helpers;
-using PasswordManagerSystem.Models;
+﻿using PasswordManagerSystem.Data;
+using PasswordManagerSystem.Helpers;
 using PasswordManagerSystem.Services;
 using System;
 using System.Windows.Forms;
@@ -42,7 +42,11 @@ namespace PasswordManagerSystem.Forms
             User newUser = new User
             {
                 Username = username,
-                Password = password
+                Password = password,
+                CreatedOn = DateTime.Now,
+                IsActive = true,
+                IsAdmin = false,
+                CreatedBy = 1
             };
 
             try
@@ -50,9 +54,9 @@ namespace PasswordManagerSystem.Forms
                 _userService.CreateUser(newUser);
                 MessageBox.Show("User created successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 FormHelper.ClearForm(this);
+                this.Hide();
                 frmLogin loginfrm = new frmLogin(_userService, _userDetailService, _passwordService, _passwordHistoryService);
                 loginfrm.Show();
-                this.Hide();
             }
             catch (Exception ex)
             {

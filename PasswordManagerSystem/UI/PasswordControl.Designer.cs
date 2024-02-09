@@ -53,7 +53,7 @@
             // 
             // txtPasswordId
             // 
-            this.txtPasswordId.Location = new System.Drawing.Point(423, 15);
+            this.txtPasswordId.Location = new System.Drawing.Point(660, 18);
             this.txtPasswordId.Name = "txtPasswordId";
             this.txtPasswordId.Size = new System.Drawing.Size(45, 22);
             this.txtPasswordId.TabIndex = 0;
@@ -61,7 +61,7 @@
             // 
             // txtUserId
             // 
-            this.txtUserId.Location = new System.Drawing.Point(423, 43);
+            this.txtUserId.Location = new System.Drawing.Point(660, 46);
             this.txtUserId.Name = "txtUserId";
             this.txtUserId.Size = new System.Drawing.Size(45, 22);
             this.txtUserId.TabIndex = 1;
@@ -70,7 +70,7 @@
             // lblAppType
             // 
             this.lblAppType.AutoSize = true;
-            this.lblAppType.Location = new System.Drawing.Point(56, 100);
+            this.lblAppType.Location = new System.Drawing.Point(293, 103);
             this.lblAppType.Name = "lblAppType";
             this.lblAppType.Size = new System.Drawing.Size(109, 16);
             this.lblAppType.TabIndex = 2;
@@ -79,7 +79,7 @@
             // lblAppName
             // 
             this.lblAppName.AutoSize = true;
-            this.lblAppName.Location = new System.Drawing.Point(56, 135);
+            this.lblAppName.Location = new System.Drawing.Point(293, 138);
             this.lblAppName.Name = "lblAppName";
             this.lblAppName.Size = new System.Drawing.Size(114, 16);
             this.lblAppName.TabIndex = 3;
@@ -88,7 +88,7 @@
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(56, 170);
+            this.lblUsername.Location = new System.Drawing.Point(293, 173);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(76, 16);
             this.lblUsername.TabIndex = 4;
@@ -97,7 +97,7 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(56, 204);
+            this.lblPassword.Location = new System.Drawing.Point(293, 207);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(67, 16);
             this.lblPassword.TabIndex = 5;
@@ -106,7 +106,7 @@
             // lblRemindMe
             // 
             this.lblRemindMe.AutoSize = true;
-            this.lblRemindMe.Location = new System.Drawing.Point(56, 248);
+            this.lblRemindMe.Location = new System.Drawing.Point(293, 285);
             this.lblRemindMe.Name = "lblRemindMe";
             this.lblRemindMe.Size = new System.Drawing.Size(76, 16);
             this.lblRemindMe.TabIndex = 6;
@@ -115,7 +115,7 @@
             // lblReminderDays
             // 
             this.lblReminderDays.AutoSize = true;
-            this.lblReminderDays.Location = new System.Drawing.Point(56, 301);
+            this.lblReminderDays.Location = new System.Drawing.Point(293, 338);
             this.lblReminderDays.Name = "lblReminderDays";
             this.lblReminderDays.Size = new System.Drawing.Size(101, 16);
             this.lblReminderDays.TabIndex = 7;
@@ -124,7 +124,7 @@
             // lblDeleted
             // 
             this.lblDeleted.AutoSize = true;
-            this.lblDeleted.Location = new System.Drawing.Point(56, 337);
+            this.lblDeleted.Location = new System.Drawing.Point(293, 374);
             this.lblDeleted.Name = "lblDeleted";
             this.lblDeleted.Size = new System.Drawing.Size(68, 16);
             this.lblDeleted.TabIndex = 8;
@@ -133,7 +133,7 @@
             // lblActive
             // 
             this.lblActive.AutoSize = true;
-            this.lblActive.Location = new System.Drawing.Point(56, 375);
+            this.lblActive.Location = new System.Drawing.Point(293, 412);
             this.lblActive.Name = "lblActive";
             this.lblActive.Size = new System.Drawing.Size(57, 16);
             this.lblActive.TabIndex = 10;
@@ -141,14 +141,14 @@
             // 
             // txtApplicationName
             // 
-            this.txtApplicationName.Location = new System.Drawing.Point(244, 129);
+            this.txtApplicationName.Location = new System.Drawing.Point(481, 132);
             this.txtApplicationName.Name = "txtApplicationName";
             this.txtApplicationName.Size = new System.Drawing.Size(224, 22);
             this.txtApplicationName.TabIndex = 2;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(244, 198);
+            this.txtPassword.Location = new System.Drawing.Point(481, 201);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(224, 22);
@@ -156,14 +156,14 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(244, 164);
+            this.txtUsername.Location = new System.Drawing.Point(481, 167);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(224, 22);
             this.txtUsername.TabIndex = 3;
             // 
             // txtReminderDays
             // 
-            this.txtReminderDays.Location = new System.Drawing.Point(244, 295);
+            this.txtReminderDays.Location = new System.Drawing.Point(481, 332);
             this.txtReminderDays.MaxLength = 100;
             this.txtReminderDays.Name = "txtReminderDays";
             this.txtReminderDays.Size = new System.Drawing.Size(224, 22);
@@ -173,7 +173,7 @@
             // chkRemindMe
             // 
             this.chkRemindMe.AutoSize = true;
-            this.chkRemindMe.Location = new System.Drawing.Point(244, 247);
+            this.chkRemindMe.Location = new System.Drawing.Point(481, 284);
             this.chkRemindMe.Name = "chkRemindMe";
             this.chkRemindMe.Size = new System.Drawing.Size(18, 17);
             this.chkRemindMe.TabIndex = 5;
@@ -182,7 +182,7 @@
             // chkDeleted
             // 
             this.chkDeleted.AutoSize = true;
-            this.chkDeleted.Location = new System.Drawing.Point(244, 336);
+            this.chkDeleted.Location = new System.Drawing.Point(481, 373);
             this.chkDeleted.Name = "chkDeleted";
             this.chkDeleted.Size = new System.Drawing.Size(18, 17);
             this.chkDeleted.TabIndex = 7;
@@ -191,7 +191,7 @@
             // chkActive
             // 
             this.chkActive.AutoSize = true;
-            this.chkActive.Location = new System.Drawing.Point(244, 374);
+            this.chkActive.Location = new System.Drawing.Point(481, 411);
             this.chkActive.Name = "chkActive";
             this.chkActive.Size = new System.Drawing.Size(18, 17);
             this.chkActive.TabIndex = 8;
@@ -199,7 +199,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(380, 415);
+            this.btnSave.Location = new System.Drawing.Point(617, 461);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(88, 34);
             this.btnSave.TabIndex = 24;
@@ -211,16 +211,16 @@
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(244, 92);
+            this.comboBox1.Location = new System.Drawing.Point(481, 95);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(224, 24);
             this.comboBox1.TabIndex = 1;
             // 
             // btnGenerate
             // 
-            this.btnGenerate.Location = new System.Drawing.Point(489, 196);
+            this.btnGenerate.Location = new System.Drawing.Point(574, 229);
             this.btnGenerate.Name = "btnGenerate";
-            this.btnGenerate.Size = new System.Drawing.Size(75, 23);
+            this.btnGenerate.Size = new System.Drawing.Size(65, 30);
             this.btnGenerate.TabIndex = 25;
             this.btnGenerate.Text = "Generate";
             this.btnGenerate.UseVisualStyleBackColor = true;
@@ -228,9 +228,9 @@
             // 
             // btnViewPassword
             // 
-            this.btnViewPassword.Location = new System.Drawing.Point(489, 226);
+            this.btnViewPassword.Location = new System.Drawing.Point(645, 229);
             this.btnViewPassword.Name = "btnViewPassword";
-            this.btnViewPassword.Size = new System.Drawing.Size(75, 23);
+            this.btnViewPassword.Size = new System.Drawing.Size(60, 30);
             this.btnViewPassword.TabIndex = 26;
             this.btnViewPassword.Text = "View";
             this.btnViewPassword.UseVisualStyleBackColor = true;
@@ -241,6 +241,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.btnViewPassword);
             this.Controls.Add(this.btnGenerate);
             this.Controls.Add(this.comboBox1);
@@ -263,7 +264,7 @@
             this.Controls.Add(this.txtUserId);
             this.Controls.Add(this.txtPasswordId);
             this.Name = "PasswordControl";
-            this.Size = new System.Drawing.Size(606, 522);
+            this.Size = new System.Drawing.Size(1013, 555);
             this.Load += new System.EventHandler(this.PasswordControl_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

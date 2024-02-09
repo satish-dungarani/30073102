@@ -36,18 +36,19 @@
             // 
             // dgvHistory
             // 
+            this.dgvHistory.BackgroundColor = System.Drawing.Color.White;
             this.dgvHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHistory.Location = new System.Drawing.Point(4, 55);
+            this.dgvHistory.Location = new System.Drawing.Point(4, 94);
             this.dgvHistory.Name = "dgvHistory";
             this.dgvHistory.RowHeadersWidth = 51;
             this.dgvHistory.RowTemplate.Height = 24;
-            this.dgvHistory.Size = new System.Drawing.Size(833, 434);
+            this.dgvHistory.Size = new System.Drawing.Size(985, 393);
             this.dgvHistory.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 14);
+            this.label1.Location = new System.Drawing.Point(12, 59);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 16);
             this.label1.TabIndex = 1;
@@ -55,9 +56,9 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(72, 14);
+            this.txtSearch.Location = new System.Drawing.Point(78, 56);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(765, 22);
+            this.txtSearch.Size = new System.Drawing.Size(256, 22);
             this.txtSearch.TabIndex = 2;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -65,11 +66,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvHistory);
             this.Name = "HistoryGrid";
-            this.Size = new System.Drawing.Size(840, 544);
+            this.Size = new System.Drawing.Size(1011, 540);
             this.Load += new System.EventHandler(this.HistoryGrid_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).EndInit();
             this.ResumeLayout(false);

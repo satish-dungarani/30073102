@@ -1,9 +1,10 @@
-﻿using PasswordManagerSystem.Models;
-using System;
+﻿using PasswordManagerSystem.Data;
+using PasswordManagerSystem.Models;
 using System.Collections.Generic;
 using System.Data.Entity;
-using System.Data.SqlClient;
 using System.Linq;
+using static PasswordManagerSystem.Helpers.FormHelper;
+
 namespace PasswordManagerSystem.Repositories
 {
     public class UserRepository : IUserRepository
@@ -20,9 +21,29 @@ namespace PasswordManagerSystem.Repositories
             return _dbContext.Users.Find(userId);
         }
 
-        public IEnumerable<User> GetAllUsers()
+        public IEnumerable<UserModel> GetAllUsers(string searchstr)
         {
-            return _dbContext.Users.ToList();
+            var query = from user in _dbContext.Users
+                        join detail in _dbContext.UserDetails
+                        on user.Id equals detail.UserId
+                        where
+                        string.IsNullOrEmpty(searchstr) ||
+                        user.Username.Contains(searchstr) ||
+                        detail.Firstname.Contains(searchstr) ||
+                        detail.Lastname.Contains(searchstr) ||
+                        detail.Email.Contains(searchstr) ||
+                        detail.Mobile.Contains(searchstr)
+                        select new UserModel
+                        {
+                            Id = user.Id,
+                            Name = detail.Firstname + " " + detail.Lastname,
+                            UserName = user.Username,
+                            Password = user.Password,
+                            Email = detail.Email,
+                            Mobile = detail.Mobile,
+                            CreatedOn = user.CreatedOn.ToString()
+                        };
+            return query.ToList();
         }
 
         public void CreateUser(User user)

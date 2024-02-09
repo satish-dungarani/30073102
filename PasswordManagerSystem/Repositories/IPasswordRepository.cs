@@ -1,4 +1,5 @@
-﻿using PasswordManagerSystem.Models;
+﻿using PasswordManagerSystem.Data;
+using PasswordManagerSystem.Models;
 using System.Collections.Generic;
 namespace PasswordManagerSystem.Repositories
 {

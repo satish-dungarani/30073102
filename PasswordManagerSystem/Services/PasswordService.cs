@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using PasswordManagerSystem.Data;
+using PasswordManagerSystem.Helpers;
 using PasswordManagerSystem.Models;
 using PasswordManagerSystem.Repositories;
+using System.Collections.Generic;
 
 namespace PasswordManagerSystem.Services
 {
@@ -17,11 +19,6 @@ namespace PasswordManagerSystem.Services
         {
             return _passwordRepository.GetPasswordById(passwordId);
         }
-
-        public IEnumerable<Password> GetAllPasswords()
-        {
-            return _passwordRepository.GetAllPasswords();
-        }
         
         public IEnumerable<PasswordModel> GetAllPasswordsByUserId(int userId, string searchstr)
         {
@@ -30,11 +27,13 @@ namespace PasswordManagerSystem.Services
 
         public void CreatePassword(Password password)
         {
+            password.PasswordValue = FormHelper.EncryptData(password.PasswordValue);
             _passwordRepository.CreatePassword(password);
         }
 
         public void UpdatePassword(Password password)
         {
+            password.PasswordValue = FormHelper.EncryptData(password.PasswordValue);
             _passwordRepository.UpdatePassword(password);
         }
 

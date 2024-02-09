@@ -39,14 +39,16 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btmMinimize = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(138, 126);
+            this.lblUsername.Location = new System.Drawing.Point(148, 202);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(84, 18);
             this.lblUsername.TabIndex = 0;
@@ -56,7 +58,7 @@
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(138, 174);
+            this.lblPassword.Location = new System.Drawing.Point(148, 250);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(75, 18);
             this.lblPassword.TabIndex = 1;
@@ -64,16 +66,18 @@
             // 
             // txtUsername
             // 
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(250, 126);
+            this.txtUsername.Location = new System.Drawing.Point(260, 202);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(100, 22);
             this.txtUsername.TabIndex = 2;
             // 
             // txtPassword
             // 
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(250, 167);
+            this.txtPassword.Location = new System.Drawing.Point(260, 243);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(100, 22);
@@ -82,7 +86,7 @@
             // btnLogin
             // 
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(141, 208);
+            this.btnLogin.Location = new System.Drawing.Point(151, 284);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(209, 41);
             this.btnLogin.TabIndex = 4;
@@ -94,7 +98,7 @@
             // 
             this.lblDontHaveAccount.AutoSize = true;
             this.lblDontHaveAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDontHaveAccount.Location = new System.Drawing.Point(176, 286);
+            this.lblDontHaveAccount.Location = new System.Drawing.Point(186, 362);
             this.lblDontHaveAccount.Name = "lblDontHaveAccount";
             this.lblDontHaveAccount.Size = new System.Drawing.Size(139, 16);
             this.lblDontHaveAccount.TabIndex = 5;
@@ -103,7 +107,7 @@
             // btnRegister
             // 
             this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegister.Location = new System.Drawing.Point(141, 320);
+            this.btnRegister.Location = new System.Drawing.Point(151, 396);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(209, 41);
             this.btnRegister.TabIndex = 6;
@@ -114,9 +118,9 @@
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90.05682F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.943182F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 91.77489F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.225108F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.tableLayoutPanel2.Controls.Add(this.btnClose, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.btmMinimize, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
@@ -132,9 +136,9 @@
             // 
             this.btnClose.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(470, 3);
+            this.btnClose.Location = new System.Drawing.Point(465, 3);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(27, 28);
+            this.btnClose.Size = new System.Drawing.Size(32, 28);
             this.btnClose.TabIndex = 0;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -144,9 +148,9 @@
             // 
             this.btmMinimize.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btmMinimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btmMinimize.Location = new System.Drawing.Point(424, 3);
+            this.btmMinimize.Location = new System.Drawing.Point(427, 3);
             this.btmMinimize.Name = "btmMinimize";
-            this.btmMinimize.Size = new System.Drawing.Size(40, 28);
+            this.btmMinimize.Size = new System.Drawing.Size(32, 28);
             this.btmMinimize.TabIndex = 1;
             this.btmMinimize.Text = "-";
             this.btmMinimize.UseVisualStyleBackColor = true;
@@ -159,9 +163,19 @@
             this.label1.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(415, 26);
+            this.label1.Size = new System.Drawing.Size(418, 26);
             this.label1.TabIndex = 2;
             this.label1.Text = "Password Manager";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PasswordManagerSystem.Properties.Resources.usw_logo;
+            this.pictureBox1.Location = new System.Drawing.Point(151, 45);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(134, 138);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
             // 
             // frmLogin
             // 
@@ -169,6 +183,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(500, 500);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.lblDontHaveAccount);
@@ -184,6 +199,7 @@
             this.Text = "frmLogin";
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,5 +218,6 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btmMinimize;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

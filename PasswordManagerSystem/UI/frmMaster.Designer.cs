@@ -33,19 +33,17 @@
             this.btnPasswords = new System.Windows.Forms.Button();
             this.btnHistory = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnHome = new System.Windows.Forms.Button();
+            this.btnUsers = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnClose = new System.Windows.Forms.Button();
             this.btmMinimize = new System.Windows.Forms.Button();
             this.lblUsername = new System.Windows.Forms.Label();
             this.pnlBody = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.pnlBody.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -58,6 +56,7 @@
             this.tableLayoutPanel1.Controls.Add(this.btnLogout, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnHome, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnUsers, 0, 5);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -120,6 +119,17 @@
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::PasswordManagerSystem.Properties.Resources.profile;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(194, 204);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // btnHome
             // 
             this.btnHome.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -131,6 +141,17 @@
             this.btnHome.Text = "HOME";
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // btnUsers
+            // 
+            this.btnUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnUsers.Location = new System.Drawing.Point(3, 413);
+            this.btnUsers.Name = "btnUsers";
+            this.btnUsers.Size = new System.Drawing.Size(194, 44);
+            this.btnUsers.TabIndex = 5;
+            this.btnUsers.Text = "USERS";
+            this.btnUsers.UseVisualStyleBackColor = true;
+            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
             // tableLayoutPanel2
             // 
@@ -146,16 +167,16 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(700, 34);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1000, 35);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // btnClose
             // 
             this.btnClose.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(663, 3);
+            this.btnClose.Location = new System.Drawing.Point(963, 3);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(34, 28);
+            this.btnClose.Size = new System.Drawing.Size(34, 29);
             this.btnClose.TabIndex = 6;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -165,9 +186,9 @@
             // 
             this.btmMinimize.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btmMinimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btmMinimize.Location = new System.Drawing.Point(623, 3);
+            this.btmMinimize.Location = new System.Drawing.Point(923, 3);
             this.btmMinimize.Name = "btmMinimize";
-            this.btmMinimize.Size = new System.Drawing.Size(34, 28);
+            this.btmMinimize.Size = new System.Drawing.Size(34, 29);
             this.btmMinimize.TabIndex = 5;
             this.btmMinimize.Text = "-";
             this.btmMinimize.UseVisualStyleBackColor = true;
@@ -179,58 +200,24 @@
             this.lblUsername.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblUsername.Location = new System.Drawing.Point(3, 0);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(0, 34);
+            this.lblUsername.Size = new System.Drawing.Size(0, 35);
             this.lblUsername.TabIndex = 2;
             this.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pnlBody
             // 
-            this.pnlBody.Controls.Add(this.label2);
-            this.pnlBody.Controls.Add(this.label1);
             this.pnlBody.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBody.Location = new System.Drawing.Point(200, 34);
+            this.pnlBody.Location = new System.Drawing.Point(200, 35);
             this.pnlBody.Name = "pnlBody";
-            this.pnlBody.Size = new System.Drawing.Size(700, 566);
+            this.pnlBody.Size = new System.Drawing.Size(1000, 565);
             this.pnlBody.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(437, 264);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(191, 22);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Student Id: 30073102";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 179);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(643, 74);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Password Manager";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::PasswordManagerSystem.Properties.Resources.profile;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(194, 204);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // frmMaster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(900, 600);
+            this.ClientSize = new System.Drawing.Size(1200, 600);
             this.Controls.Add(this.pnlBody);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -240,11 +227,9 @@
             this.Text = "frmMaster";
             this.Load += new System.EventHandler(this.frmMaster_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            this.pnlBody.ResumeLayout(false);
-            this.pnlBody.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -262,8 +247,7 @@
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblUsername;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnHome;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnUsers;
     }
 }

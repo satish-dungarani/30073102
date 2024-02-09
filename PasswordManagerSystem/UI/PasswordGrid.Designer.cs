@@ -46,11 +46,11 @@
             this.Edit,
             this.Delete,
             this.ViewPassword});
-            this.dgvPasswordGrid.Location = new System.Drawing.Point(3, 118);
+            this.dgvPasswordGrid.Location = new System.Drawing.Point(6, 96);
             this.dgvPasswordGrid.Name = "dgvPasswordGrid";
             this.dgvPasswordGrid.RowHeadersWidth = 51;
             this.dgvPasswordGrid.RowTemplate.Height = 24;
-            this.dgvPasswordGrid.Size = new System.Drawing.Size(790, 280);
+            this.dgvPasswordGrid.Size = new System.Drawing.Size(977, 391);
             this.dgvPasswordGrid.TabIndex = 0;
             this.dgvPasswordGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPasswordGrid_CellContentClick);
             this.dgvPasswordGrid.ColumnAdded += new System.Windows.Forms.DataGridViewColumnEventHandler(this.dgvPasswordGrid_ColumnAdded);
@@ -88,7 +88,7 @@
             // 
             // btnPassword
             // 
-            this.btnPassword.Location = new System.Drawing.Point(522, 44);
+            this.btnPassword.Location = new System.Drawing.Point(842, 43);
             this.btnPassword.Name = "btnPassword";
             this.btnPassword.Size = new System.Drawing.Size(141, 34);
             this.btnPassword.TabIndex = 1;
@@ -99,7 +99,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 62);
+            this.label1.Location = new System.Drawing.Point(10, 58);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 16);
             this.label1.TabIndex = 2;
@@ -107,7 +107,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(103, 55);
+            this.textBox1.Location = new System.Drawing.Point(66, 55);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(277, 22);
             this.textBox1.TabIndex = 3;
@@ -117,12 +117,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnPassword);
             this.Controls.Add(this.dgvPasswordGrid);
             this.Name = "PasswordGrid";
-            this.Size = new System.Drawing.Size(810, 401);
+            this.Size = new System.Drawing.Size(999, 539);
             this.Load += new System.EventHandler(this.PasswordGrid_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPasswordGrid)).EndInit();
             this.ResumeLayout(false);

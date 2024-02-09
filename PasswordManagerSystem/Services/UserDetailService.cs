@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using PasswordManagerSystem.Models;
+﻿using PasswordManagerSystem.Data;
 using PasswordManagerSystem.Repositories;
 
 namespace PasswordManagerSystem.Services
@@ -11,16 +10,6 @@ namespace PasswordManagerSystem.Services
         public UserDetailService(IUserDetailRepository userDetailRepository)
         {
             _userDetailRepository = userDetailRepository;
-        }
-
-        public UserDetail GetUserDetailById(int userDetailId)
-        {
-            return _userDetailRepository.GetUserDetailById(userDetailId);
-        }
-
-        public IEnumerable<UserDetail> GetAllUserDetails()
-        {
-            return _userDetailRepository.GetAllUserDetails();
         }
 
         public void CreateUserDetail(UserDetail userDetail)
@@ -35,10 +24,5 @@ namespace PasswordManagerSystem.Services
             _userDetailRepository.UpdateUserDetail(userDetail);
         }
 
-        public void DeleteUserDetail(int userDetailId)
-        {
-            // Additional business logic or validation can be added here
-            _userDetailRepository.DeleteUserDetail(userDetailId);
-        }
     }
 }

@@ -1,11 +1,12 @@
-﻿using PasswordManagerSystem.Models;
+﻿using PasswordManagerSystem.Data;
+using PasswordManagerSystem.Models;
 using System.Collections.Generic;
 namespace PasswordManagerSystem.Repositories
 {
     public interface IUserRepository
     {
         User GetUserById(int userId);
-        IEnumerable<User> GetAllUsers();
+        IEnumerable<UserModel> GetAllUsers(string searchstr);
         void CreateUser(User user);
         void UpdateUser(User user);
         void DeleteUser(int userId);

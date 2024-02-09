@@ -1,14 +1,8 @@
-﻿using PasswordManagerSystem.Helpers;
+﻿using PasswordManagerSystem.Data;
+using PasswordManagerSystem.Helpers;
 using PasswordManagerSystem.Models;
 using PasswordManagerSystem.Services;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PasswordManagerSystem.UI
@@ -17,6 +11,7 @@ namespace PasswordManagerSystem.UI
     {
         private readonly ProfileModel _profileModel;
         private readonly PasswordService _passwordService;
+        public int passId = 0;
         public PasswordControl(ProfileModel profileModel, PasswordService passwordService)
         {
             InitializeComponent();
@@ -34,11 +29,29 @@ namespace PasswordManagerSystem.UI
 
         private void PasswordControl_Load(object sender, EventArgs e)
         {
-            txtUserId.Text = _profileModel.user.Id.ToString();
             comboBox1.Items.Clear();
             FormHelper.ApplicationType[] items = (FormHelper.ApplicationType[])Enum.GetValues(typeof(FormHelper.ApplicationType));
             foreach (FormHelper.ApplicationType item in items)
                 comboBox1.Items.Add(item);
+
+            if (passId > 0)
+            {
+                var pass = _passwordService.GetPasswordById(passId);
+                txtPasswordId.Text = passId.ToString();
+                comboBox1.SelectedIndex = pass.ApplicationType - 1;
+                txtPassword.Text = FormHelper.DecryptData(pass.PasswordValue);
+                txtApplicationName.Text = pass.ApplicationName;
+                txtReminderDays.Text = pass.ReminderDays.ToString();
+                chkDeleted.Checked = pass.IsDeleted;
+                chkActive.Checked = pass.IsActive;
+                chkRemindMe.Checked = pass.RemindMe;
+                txtUserId.Text = pass.UserId.ToString();
+                txtUsername.Text = pass.Username;
+            }
+            else
+            {
+                txtUserId.Text = _profileModel.user.Id.ToString();
+            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -60,8 +73,10 @@ namespace PasswordManagerSystem.UI
                 UpdatedBy = Convert.ToInt32(txtUserId.Text),
                 UpdatedOn = DateTime.Now
             };
-
-            _passwordService.CreatePassword(pass);
+            if (pass.Id > 0)
+                _passwordService.UpdatePassword(pass);
+            else
+                _passwordService.CreatePassword(pass);
             MessageBox.Show("Password saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -86,8 +101,6 @@ namespace PasswordManagerSystem.UI
             return generatedPassword;
         }
 
-        private bool longClickDetected = false;
-
         private void btnViewPassword_MouseDown(object sender, MouseEventArgs e)
         {
             txtPassword.PasswordChar = '\0';
@@ -97,7 +110,5 @@ namespace PasswordManagerSystem.UI
         {
             txtPassword.PasswordChar = '*';
         }
-
     }
-
 }
